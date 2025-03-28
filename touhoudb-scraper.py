@@ -4,9 +4,10 @@ import requests
 import json
 import sys
 
-file = sys.argv[1]
-print("file:",file)
-with open("D:/code/touhoudb-scraper/17368.html", 'r', encoding='utf-8', errors='ignore') as fp:
+slug = sys.argv[1]
+print("slug:",slug)
+path = "D:/code/touhoudb-scraper/html/" + slug + ".html"
+with open(path, 'r', encoding='utf-8', errors='ignore') as fp:
   fp_text = fp.read()
   soup = BeautifulSoup(fp_text, 'html.parser')
 
